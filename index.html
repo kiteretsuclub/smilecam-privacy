@@ -15,88 +15,171 @@
   h2 { font-size: 1.15em; margin: 2em 0 .4em; border-left: 4px solid var(--accent); padding-left: 10px; }
   .date { color: var(--sub); font-size: .9em; }
   hr { border: 0; border-top: 1px solid var(--line); margin: 48px 0; }
-  a { color: var(--accent); }
+  a { color: var(--accent); overflow-wrap: anywhere; }
   nav a { margin-right: 12px; }
+  table { border-collapse: collapse; width: 100%; font-size: .92em; margin: .6em 0; }
+  th, td { border: 1px solid var(--line); padding: 6px 8px; text-align: left; vertical-align: top; }
+  th { white-space: nowrap; }
 </style>
 </head>
 <body>
 <main>
-<nav><a href="#ja">日本語</a><a href="#en">English</a></nav>
+<nav><a href="#ja">日本語</a><a href="#en">English</a><a href="https://kiteretsuclub.github.io/smilecam-privacy/support/">サポート / Support</a></nav>
 
 <section id="ja" lang="ja">
 <h1>笑えカメラ プライバシーポリシー</h1>
-<p class="date">制定日：2026年10月7日</p>
+<p class="date">制定日：2026年10月7日　最終更新日：2026年10月7日</p>
 
-<p>Kenshiro Tammachi（以下「開発者」）は、スマートフォンアプリ「笑えカメラ」（以下「本アプリ」）における利用者の情報の取り扱いについて、以下のとおり定めます。</p>
+<p>Kenshiro Tammachi（以下「開発者」）は、スマートフォンアプリ「笑えカメラ」（英語名 Smile Cam、iOS 版・Android 版。以下「本アプリ」）における利用者の情報の取り扱いについて、以下のとおり定めます。</p>
 
-<h2>1. カメラ・写真・顔の情報</h2>
-<p>本アプリはカメラ映像から笑顔を判定しますが、この処理はすべて端末内で行われます。カメラ映像・撮影した写真や動画・顔の情報を開発者のサーバーや第三者に送信することはありません。撮影した写真や動画は、利用者の操作によって端末の写真ライブラリに保存されます。</p>
-<p>写真ライブラリへのアクセスは、撮影結果を保存するためだけに使います。マイクは動画の音声を録音するためだけに使います。</p>
+<h2>1. 開発者が収集する情報</h2>
+<p>開発者は、本アプリを通じて利用者の個人情報を収集しません。本アプリにはアカウント登録がなく、氏名・メールアドレス・電話番号・連絡先・正確な位置情報・写真・動画・顔の情報を、開発者のサーバーに送信する仕組みはありません（開発者はそのようなサーバーを運用していません）。</p>
+<p>本アプリで情報が端末の外に送られるのは、次の場合に限られます。</p>
+<table>
+  <tr><th>送信先</th><th>情報</th><th>目的</th></tr>
+  <tr><td>Google（AdMob）</td><td>広告識別子、IP アドレス（おおよその位置の推定に使用）、広告の表示・操作、診断情報</td><td>広告の配信・効果測定・不正防止（第 3 項）</td></tr>
+  <tr><td>Google（ML Kit、Android 版のみ）</td><td>顔検出機能の性能・利用状況の指標（画像・顔の情報は含みません）</td><td>機能の改善（第 2 項）</td></tr>
+  <tr><td>Apple / Google（ストア）</td><td>購入の情報</td><td>PRO の購入・購入状態の確認（第 5 項）</td></tr>
+  <tr><td>利用者が選んだアプリ</td><td>利用者が共有した写真・動画・文章</td><td>利用者の操作による共有（第 6 項）</td></tr>
+</table>
 
-<h2>2. 広告</h2>
-<p>本アプリは Google LLC の広告配信サービス「Google AdMob」を利用しています。AdMob は広告の配信・効果測定・不正防止のため、広告識別子（IDFA など）、おおよその位置情報（IP アドレスから推定）、広告の表示・操作に関する情報、診断情報などを収集することがあります。</p>
+<h2>2. カメラ・マイク・写真と顔の情報</h2>
+<p>本アプリはカメラ映像から笑顔を判定します。判定は iOS 版では Apple の Vision フレームワーク、Android 版では Google ML Kit の顔検出を使い、<strong>すべて端末内で</strong>行います。カメラ映像・撮影した写真や動画・顔の情報を保存したり、開発者や第三者に送信したりすることはありません。</p>
+<p>顔の情報は笑顔の判定のためだけに一時的に使い、すぐに破棄します。<strong>個人の識別、広告、マーケティング、利用状況の分析（データマイニング）には一切使用しません。</strong></p>
 <ul>
-  <li>EEA・英国などでは、Google のプライバシー同意画面（UMP）で同意の有無を選べます。本アプリの設定画面（⚙）または PRO 画面の「広告のプライバシー設定」からいつでも変更できます。</li>
-  <li>iOS では、広告識別子を使ったトラッキングを許可するかどうかを確認画面（App Tracking Transparency）で選べます。許可しない場合も本アプリは利用できます。設定は iOS の「設定 › プライバシーとセキュリティ › トラッキング」から変更できます。</li>
+  <li>カメラ：撮影と笑顔の判定のために使います。</li>
+  <li>マイク：動画の音声を録音するためだけに使います。</li>
+  <li>写真ライブラリ：撮影した写真・動画を保存するためだけに使います（iOS では追加のみの許可で、既存の写真を読み取ることはありません）。</li>
 </ul>
-<p>Google による情報の取り扱いについては、<a href="https://policies.google.com/technologies/partner-sites">Google のポリシー</a>をご覧ください。</p>
+<p>Android 版の ML Kit は、機能の改善のため、API の性能や利用状況に関する指標を Google に送信する場合があります。この指標に画像や顔の情報は含まれません。</p>
 
-<h2>3. App 内課金</h2>
-<p>PRO の購入は Apple（App Store）または Google（Google Play）の決済を通じて行われます。開発者が支払い情報を受け取ることはありません。購入状態の確認のみ各ストアから取得します。</p>
+<h2>3. 広告</h2>
+<p>無料版では Google LLC の広告配信サービス「Google AdMob」（Google Mobile Ads SDK）を利用しています。撮影結果を閉じたときにときどき全画面広告を、利用者が選んだときだけ動画リワード広告（PRO の 24 時間おためし）を表示します。PRO では広告を表示しません。</p>
+<p>AdMob は広告の配信・効果測定・不正防止のため、広告識別子（iOS では App Tracking Transparency で許可した場合のみ IDFA、Android では広告 ID）、IP アドレスから推定するおおよその位置情報、広告の表示・操作に関する情報、診断情報などを収集し、Google に送信することがあります。</p>
+<ul>
+  <li>iOS では、他社のアプリや Web サイトをまたいだトラッキングを許可するかどうかを確認画面（App Tracking Transparency）で選べます。許可しなくても本アプリはすべての機能を利用できます。</li>
+  <li>EEA・英国などでは、Google のプライバシー同意画面（User Messaging Platform）で同意の有無を選べます。</li>
+</ul>
+<p>Google による情報の取り扱いは、<a href="https://policies.google.com/technologies/partner-sites">Google のサービスを使用するサイトやアプリから収集した情報の Google による使用</a>および<a href="https://policies.google.com/privacy">Google プライバシーポリシー</a>をご覧ください。</p>
 
-<h2>4. 端末内に保存する情報</h2>
-<p>ハードルの設定、PRO の購入状態、最後に使った共有先などの設定は、端末内にのみ保存されます。アプリを削除すると消去されます。</p>
+<h2>4. 第三者による保護</h2>
+<p>開発者は、本アプリに組み込む第三者のサービス（Google AdMob、Google ML Kit、各ストアの課金機能）を、本ポリシーおよび App Store・Google Play の規約が求める水準と同等以上の利用者データの保護を提供するものに限って利用し、それ以外の第三者に利用者の情報を提供・販売することはありません。これらの第三者は、それぞれのプライバシーポリシーと、本アプリに適用される各ストアの規約に従って情報を取り扱います。</p>
 
-<h2>5. 共有</h2>
-<p>SNS への共有は、利用者が共有ボタンを押したときにのみ、利用者が選んだアプリに対して行われます。共有先での取り扱いは各サービスのポリシーに従います。</p>
+<h2>5. App 内課金</h2>
+<p>PRO は買い切りの App 内課金で、iOS 版は Apple（App Store）、Android 版は Google（Google Play）の決済を通じて提供します。支払い情報は Apple または Google が管理し、開発者が受け取ることはありません。本アプリは購入状態の確認のためにのみ、各ストアから提供される購入情報を使用します。</p>
 
-<h2>6. 子どものプライバシー</h2>
-<p>本アプリは、13 歳未満の子どもから意図的に個人情報を収集することはありません。</p>
+<h2>6. 共有</h2>
+<p>SNS などへの共有は、利用者が共有ボタンを押したときにのみ、利用者が選んだアプリに対して行われます。共有先での取り扱いは各サービスのポリシーに従います。</p>
 
-<h2>7. 改定</h2>
+<h2>7. 端末内に保存する情報</h2>
+<p>ハードルの設定、ロゴ表示・オート撮影などの設定、PRO の購入状態、広告視聴による PRO おためしの期限は、端末内にのみ保存されます。</p>
+
+<h2>8. 保存期間と削除</h2>
+<ul>
+  <li>開発者は利用者の情報をサーバーに保存していないため、開発者側で保持・削除する情報はありません。</li>
+  <li>端末内の設定は本アプリを削除すると消去されます。撮影した写真・動画は、端末の写真アプリからいつでも削除できます。</li>
+  <li>Google が広告のために収集した情報は、<a href="https://policies.google.com/technologies/retention">Google のデータ保持ポリシー</a>に従って保持・削除されます。</li>
+</ul>
+
+<h2>9. 同意の撤回・設定の変更</h2>
+<ul>
+  <li>トラッキング（iOS）：「設定」›「プライバシーとセキュリティ」›「トラッキング」でいつでも許可を取り消せます。</li>
+  <li>広告の同意（EEA・英国など）：本アプリの設定画面（⚙）または PRO 画面の「広告のプライバシー設定」からいつでも変更・撤回できます。</li>
+  <li>広告 ID（Android）：端末の「設定」›「プライバシー」›「広告」からリセット・削除できます。</li>
+  <li>カメラ・マイク・写真：端末の「設定」から本アプリへのアクセス許可をいつでも取り消せます。</li>
+  <li>広告そのものを表示しないようにするには、PRO を購入してください。</li>
+</ul>
+<p>情報の削除や取り扱いに関するご依頼は、第 12 項の連絡先までご連絡ください。Google が保持する情報については、<a href="https://myadcenter.google.com/">Google マイ アド センター</a>や Google のプライバシーポリシーに記載の方法でも削除や設定の変更を依頼できます。</p>
+
+<h2>10. 子どものプライバシー</h2>
+<p>本アプリは 13 歳未満の子どもを主な対象としておらず、13 歳未満の子どもから意図的に個人情報を収集することはありません。</p>
+
+<h2>11. 改定</h2>
 <p>本ポリシーは必要に応じて改定することがあります。重要な変更がある場合は、本ページまたはアプリ内でお知らせします。</p>
 
-<h2>8. お問い合わせ</h2>
-<p>本アプリに関するお問い合わせ：<a href="mailto:used.kiteretsu@gmail.com">used.kiteretsu@gmail.com</a></p>
+<h2>12. お問い合わせ</h2>
+<p>運営者：Kenshiro Tammachi（奇天烈倶楽部）<br>
+メール：<a href="mailto:used.kiteretsu@gmail.com">used.kiteretsu@gmail.com</a><br>
+サポートページ：<a href="https://kiteretsuclub.github.io/smilecam-privacy/support/">https://kiteretsuclub.github.io/smilecam-privacy/support/</a></p>
 </section>
 
 <hr>
 
 <section id="en" lang="en">
 <h1>Smile Cam Privacy Policy</h1>
-<p class="date">Effective: October 7, 2026</p>
+<p class="date">Effective: October 7, 2026 — Last updated: October 7, 2026</p>
 
-<p>This policy explains how Kenshiro Tammachi ("the developer") handles information in the app "Smile Cam" ("the app").</p>
+<p>This policy explains how Kenshiro Tammachi ("the developer") handles information in the app "Smile Cam" (笑えカメラ, iOS and Android; "the app").</p>
 
-<h2>1. Camera, photos and faces</h2>
-<p>The app reads smiles from the camera feed entirely on your device. Camera frames, the photos and videos you take, and face data are never sent to the developer or to any third party. Photos and videos are saved to your photo library only when you choose to.</p>
-<p>Photo library access is used only to save your shots. The microphone is used only to record sound for videos.</p>
+<h2>1. What the developer collects</h2>
+<p>The developer does not collect any personal information through the app. There is no account, and the app has no way to send your name, email, phone number, contacts, precise location, photos, videos or face data to the developer — the developer does not run any such server.</p>
+<p>Information leaves your device only in these cases:</p>
+<table>
+  <tr><th>Recipient</th><th>Information</th><th>Purpose</th></tr>
+  <tr><td>Google (AdMob)</td><td>Advertising identifier, IP address (used to estimate approximate location), ad views and interactions, diagnostics</td><td>Serving and measuring ads, preventing fraud (section 3)</td></tr>
+  <tr><td>Google (ML Kit, Android only)</td><td>Performance and usage metrics for face detection (no images or face data)</td><td>Improving the feature (section 2)</td></tr>
+  <tr><td>Apple / Google (stores)</td><td>Purchase information</td><td>Buying PRO and checking whether you own it (section 5)</td></tr>
+  <tr><td>The app you choose</td><td>The photo, video or text you share</td><td>Sharing, only when you tap share (section 6)</td></tr>
+</table>
 
-<h2>2. Advertising</h2>
-<p>The app shows ads through Google AdMob, a service of Google LLC. To serve and measure ads and to prevent fraud, AdMob may collect the advertising identifier (such as IDFA), approximate location derived from your IP address, ad views and interactions, and diagnostic data.</p>
+<h2>2. Camera, microphone, photos and face data</h2>
+<p>The app reads smiles from the camera feed using Apple's Vision framework on iOS and Google ML Kit face detection on Android, <strong>entirely on your device</strong>. Camera frames, the photos and videos you take, and face data are never stored or sent to the developer or to any third party.</p>
+<p>Face data is used only momentarily to detect smiles and is discarded right away. <strong>It is never used to identify anyone, or for advertising, marketing or usage-based data mining.</strong></p>
 <ul>
-  <li>In the EEA, the UK and similar regions, Google's consent form (UMP) lets you choose whether to consent. You can change it anytime from "Ad privacy settings" in the app's Settings (⚙) or on the PRO screen.</li>
-  <li>On iOS, App Tracking Transparency asks whether the advertising identifier may be used for tracking. The app works either way. You can change this in iOS Settings › Privacy &amp; Security › Tracking.</li>
+  <li>Camera: to take photos and videos and to detect smiles.</li>
+  <li>Microphone: only to record sound for videos.</li>
+  <li>Photo library: only to save your shots (on iOS this is add-only access; the app never reads your existing photos).</li>
 </ul>
-<p>See <a href="https://policies.google.com/technologies/partner-sites">Google's policy</a> for how Google uses this data.</p>
+<p>On Android, ML Kit may send Google performance and usage metrics about the API to improve it. These metrics contain no images or face data.</p>
 
-<h2>3. In-app purchases</h2>
-<p>PRO is purchased through Apple (App Store) or Google (Google Play). The developer never receives your payment details; the app only checks with the store whether PRO is owned.</p>
+<h2>3. Advertising</h2>
+<p>The free version shows ads through Google AdMob (Google Mobile Ads SDK), a service of Google LLC: an occasional full-screen ad when you close a result, and a rewarded video ad only when you choose to watch one (for a 24-hour PRO trial). PRO shows no ads.</p>
+<p>To serve and measure ads and to prevent fraud, AdMob may collect and send to Google the advertising identifier (the IDFA on iOS only if you allow tracking; the advertising ID on Android), approximate location derived from your IP address, ad views and interactions, and diagnostic data.</p>
+<ul>
+  <li>On iOS, App Tracking Transparency asks whether the app may track you across other companies' apps and websites. Every feature works either way.</li>
+  <li>In the EEA, the UK and similar regions, Google's consent form (User Messaging Platform) lets you choose whether to consent.</li>
+</ul>
+<p>See <a href="https://policies.google.com/technologies/partner-sites">How Google uses information from sites or apps that use its services</a> and the <a href="https://policies.google.com/privacy">Google Privacy Policy</a>.</p>
 
-<h2>4. Data kept on your device</h2>
-<p>Settings such as your chosen bar, PRO status and the last app you shared to are stored only on your device and are deleted when you delete the app.</p>
+<h2>4. Protection by third parties</h2>
+<p>The developer uses only third-party services (Google AdMob, Google ML Kit, and the stores' billing) that provide the same or equal protection of user data as this policy and the App Store and Google Play rules require, and never provides or sells your information to anyone else. These third parties handle information under their own privacy policies and the store rules that apply to the app.</p>
 
-<h2>5. Sharing</h2>
+<h2>5. In-app purchases</h2>
+<p>PRO is a one-time in-app purchase through Apple (App Store) on iOS or Google (Google Play) on Android. Payment details are handled by Apple or Google and never reach the developer; the app only uses the purchase information the store provides to check whether you own PRO.</p>
+
+<h2>6. Sharing</h2>
 <p>The app shares to social apps only when you tap a share button, and only to the app you choose. That service's own policy then applies.</p>
 
-<h2>6. Children</h2>
-<p>The app does not knowingly collect personal information from children under 13.</p>
+<h2>7. Data kept on your device</h2>
+<p>Your settings (the smile bar, logo, auto-shoot), PRO status and any ad-unlocked PRO trial are stored only on your device.</p>
 
-<h2>7. Changes</h2>
+<h2>8. Retention and deletion</h2>
+<ul>
+  <li>The developer stores none of your information on any server, so there is nothing for the developer to keep or delete.</li>
+  <li>Settings on your device are deleted when you delete the app. You can delete your photos and videos at any time in your photo app.</li>
+  <li>Information Google collects for ads is kept and deleted under <a href="https://policies.google.com/technologies/retention">Google's data retention policy</a>.</li>
+</ul>
+
+<h2>9. Withdrawing consent and changing settings</h2>
+<ul>
+  <li>Tracking (iOS): turn it off at any time in Settings › Privacy &amp; Security › Tracking.</li>
+  <li>Ad consent (EEA, UK, etc.): change or withdraw it at any time from "Ad privacy settings" in the app's Settings (⚙) or on the PRO screen.</li>
+  <li>Advertising ID (Android): reset or delete it in your device's Settings › Privacy › Ads.</li>
+  <li>Camera, microphone and photos: revoke the app's access at any time in your device's Settings.</li>
+  <li>To stop seeing ads altogether, buy PRO.</li>
+</ul>
+<p>To ask about or request deletion of your information, contact us at the address in section 12. For information held by Google, you can also use <a href="https://myadcenter.google.com/">Google My Ad Center</a> or the options described in Google's Privacy Policy.</p>
+
+<h2>10. Children</h2>
+<p>The app is not directed at children under 13 and does not knowingly collect personal information from them.</p>
+
+<h2>11. Changes</h2>
 <p>This policy may be updated. Significant changes will be announced on this page or in the app.</p>
 
-<h2>8. Contact</h2>
-<p>Questions about the app: <a href="mailto:used.kiteretsu@gmail.com">used.kiteretsu@gmail.com</a></p>
+<h2>12. Contact</h2>
+<p>Operator: Kenshiro Tammachi (Kiteretsu Club)<br>
+Email: <a href="mailto:used.kiteretsu@gmail.com">used.kiteretsu@gmail.com</a><br>
+Support: <a href="https://kiteretsuclub.github.io/smilecam-privacy/support/">https://kiteretsuclub.github.io/smilecam-privacy/support/</a></p>
 </section>
 </main>
 </body>
